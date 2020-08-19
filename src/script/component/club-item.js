@@ -2,7 +2,7 @@ class ClubItem extends HTMLElement {
 
     constructor() {
         super();
-        this.shadowDOM = this.attachShadow({mode: "open"});
+        this.shadowDOM = this.attachShadow({ mode: "open" });
     }
 
     set club(club) {
@@ -25,22 +25,22 @@ class ClubItem extends HTMLElement {
                     border-radius: 10px;
                     overflow: hidden;
                 }
-                
+               
                 .fan-art-club {
                     width: 100%;
                     max-height: 300px;
                     object-fit: cover;
                     object-position: center;
                 }
-                
+               
                 .club-info {
                     padding: 24px;
                 }
-                
+               
                 .club-info > h2 {
                     font-weight: lighter;
                 }
-                
+               
                 .club-info > p {
                     margin-top: 10px;
                     overflow: hidden;
@@ -50,10 +50,10 @@ class ClubItem extends HTMLElement {
                     -webkit-line-clamp: 10; /* number of lines to show */
                 }
             </style>
-            <img class="fan-art-club" src="${this._club.fanArt}" alt="Fan Art">
+            <img class="fan-art-club" src="${this._club.strTeamBadge}" alt="Fan Art">
             <div class="club-info">
-                <h2>${this._club.name}</h2>
-                <p>${this._club.description}</p>
+                <h2>${this._club.strTeam}</h2>
+                <p>${this._club.strDescriptionEN}</p>
             </div>`;
     }
 }
